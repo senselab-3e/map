@@ -7,28 +7,55 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
 
     <!--css for this page-->
-    <link rel="stylesheet" href=css/pfm.css type="text/css">
+    <link href="css/pfm.css" rel="stylesheet"  type="text/css">
+    <link href="css/popop.css" rel="stylesheet"  type="text/css">
+    <link href="css/colorshifts.css" rel="stylesheet"  type="text/css">
+
 
   </head>
   <body>
 
-  <div id="btn2" class="button buttonright">
-    <a href="#">
-      POP(ulate) ~~~ add minormovement markers
-      </a>
-  </div>
+
+  <div  onclick="toggle_visibility('fabmap')"><img id ="appear" src="cards/appear.png"></div>
+<div class="minmov">
+  Minor movements are not ours to make so much as ours to attune to
+- A curatorial process for the activation of minor movements requires an attunement to the conditions that select for artfulness
+- An attunement to artfulness opens the work to its more-than
+- The more-than is what is curated
+- An environment is activated, an enlivening of an ecology
+- With the enlivening comes a felt experience of time bending
+- Time bending moves experience to its emergent unfolding
+- In this emergent unfolding we are not spectators
+- Emergent unfoldings affect the environment they co-compose
+- We are part of that co-composition
+- To compose a minor movement is to be composed by it
+- A curatorial process for the activation of minor movements requires an active shift in the presupposition that there is a field of art and a field of life
+- The political runs through the differential that is composed when the binary between art and life is undone
+- What mattters is not whether it is art, but how it shifts the conditions of experience
+- When art becomes the way and not the endpoint minor movements become orientors for processes to come.
+</div>
+
 
     <div id="map">
       <div id="cc">
-        <iframe id="popmap" src="popmap.html" frameborder="0"></iframe>
+        <iframe id="popmap" class="popone" src="popmap.html" frameborder="0"></iframe>
       </div>
-        <iframe id="fabmap" src="fabmap.php" frameborder="0"></iframe>
+        <iframe id="fabmap" src="fabmap.html" frameborder="0"></iframe>
     </div>
 
-    <iframe src="upload.php" id="uploader" frameborder="0"></iframe>
-    <iframe  src="rolodex.html" id="rolodex" frameborder="0"></iframe>
+    <iframe id="uploader" src="upload.html" frameborder="0"></iframe>
 
-    <script type="text/javascript" src="appearDisappear.js"></script>
+    <iframe class="rolodex" src="rolodex.html" frameborder="0"></iframe>
+    <iframe class="rolodex" src="placeholders.html" frameborder="0"></iframe>
+
+    <div class="button">
+      <a  href="https://drive.google.com/open?id=1OeX7kgPLPKnECNYx2H9yClFrkRuCmER3&usp=sharing">
+        POP <br> ~~~ add minormovements to the map
+        </a>
+    </div>
+
+    <script type="text/javascript" src="js/appearDisappear.js"></script>
+
 
   </body>
 </html>

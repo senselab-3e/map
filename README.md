@@ -23,7 +23,7 @@
        <a href=" ">
      replace:
         #
-and        
+        and        
      line:
        <script async defer
                src="https://maps.googleapis.com/maps/api/js?key=APIKEY&libraries=visualization&callback=initMap">

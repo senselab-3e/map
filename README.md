@@ -16,18 +16,6 @@
  - What mattters is not whether it is art, but how it shifts the conditions of experience
  - When art becomes the way and not the endpoint minor movements become orientors for processes to come.
 
-#to get the files working():
-(on main branch on this branch only replace API KEY in popmap.html)
-
-file:
-# fabmap.php
-     line:
-       $dbh = new PDO(mysql:host=$HOST;dbname=$DBNAME, $USERNAME, $PASSWORD);
-     replace:
-       $HOST
-       $DBNAME
-       $USERNAME
-       $PASSWORD
 
  file:
 # index.html
@@ -35,23 +23,10 @@ file:
        <a href=" ">
      replace:
         #
-
- file:
-# popmap.html
+and        
      line:
        <script async defer
                src="https://maps.googleapis.com/maps/api/js?key=APIKEY&libraries=visualization&callback=initMap">
        </script>
      replace:
        APIKEY
-
-
- file:
-# upload.php
-     line:
-       $dbh = new PDO(mysql:host=$HOST;dbname=$DBNAME, $USERNAME, $PASSWORD);
-     replace:
-       $HOST
-       $DBNAME
-       $USERNAME
-       $PASSWORD

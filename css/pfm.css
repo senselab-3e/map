@@ -43,6 +43,9 @@ z-index:0;
   z-index:6;
 }
 
+#glide{
+  top:0;
+}
 
 .txts{
   z-index: 2;
@@ -55,14 +58,33 @@ z-index:0;
 .menu{
   top:25%;
   left:80%;
-  position:absolute;
+  position:fixed;
   z-index: 4;
 }
 
 .button {
-  /* position:absolute; */
-  /* background-image:linear-gradient(orange,red); */
   z-index: 6;
+  /* padding: 15px 25px; */
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #45CEEF;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {
+  z-index: 7;
+  background-color: #f9ce7c
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 /* smooth operator image */

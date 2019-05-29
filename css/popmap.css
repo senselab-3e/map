@@ -9,4 +9,10 @@ html, body {
 #map_canvas{
   height:100%;
   width: 400px;
+  z-index: 2;
+}
+
+
+.front{
+  z-index: 4;
 }

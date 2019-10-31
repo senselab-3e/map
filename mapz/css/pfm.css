@@ -15,10 +15,6 @@ html, body{
   padding: 0;
 }
 
-iframe{
-  position: absolute;
-  border:none;
-}
 /* popmap */
 #map {
 height:100%;

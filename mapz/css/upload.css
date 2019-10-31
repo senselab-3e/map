@@ -14,18 +14,18 @@
   border: none;
 }
 
-body {
-background-image:url('../plants/plnt.png');
-background-color: black;
-background-size:cover;
-background-repeat:no-repeat;
+/* body { */
+/* background-image:url('../plants/plnt.png'); */
+/* background-color: black; */
+/* background-size:cover; */
+/* background-repeat:no-repeat; */
 /* background-size: contain; */
-height: 100%;
- color:#99ccff;
- font-family:sans-serif;
-}
+/* height: 100%; */
+ /* color:#99ccff; */
+ /* font-family:sans-serif; */
+/* }
 
 
 a {
  color:white;
-}
+} */

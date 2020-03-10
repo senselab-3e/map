@@ -5,6 +5,8 @@ let rand;
 let txtr;
 let rand2;
 let txtr2;
+var sliderX, sliderY, sliderZ;
+var cameraX, cameraY, cameraZ;
 
 function preload(){
   pictures = ['thingies/beige.png',
@@ -23,7 +25,7 @@ function preload(){
 function setup() {
   createCanvas(710, 400, WEBGL);
 
-  eyeZ = height / 2 / tan((30 * PI) / 180); // The default distance the camera is away from the origin.
+  // eyeZ = height / 2 / tan((30 * PI) / 180); // The default distance the camera is away from the origin.
 
   objects.push(new IntersectPlane(1, 0, 0, -100, 0, 0)); // Left wall
   objects.push(new IntersectPlane(1, 0, 0, 100, 0, 0)); // Right wall
@@ -36,9 +38,19 @@ function setup() {
 
   txtr2 = texture(rand2);
   txtr = texture(rand);
+  sliderX = createSlider(-1000, 1000, 0);
+  sliderX.position(19, 20);
+  sliderY = createSlider(-1000, 1000, 429);
+  sliderY.position(19, 40);
+  sliderZ = createSlider(-1000, 1000, 226);
+  sliderZ.position(19, 60);
 }
 
 function draw() {
+  camera(cameraX, cameraY, cameraZ, 0, 0, 0, 0, 1, 0);
+  cameraX = sliderX.value()
+  cameraY = sliderY.value()
+  cameraZ = sliderZ.value()
   background(0);
 
   // Lights
@@ -81,11 +93,11 @@ txtr2;
   const x = mouseX - width / 2;
   const y = mouseY - height / 2;
 
-  const Q = createVector(0, 0, eyeZ); // A point on the ray and the default position of the camera.
-  const v = createVector(x, y, -eyeZ); // The direction vector of the ray.
+  const Q = createVector(0, 0, cameraZ); // A point on the ray and the default position of the camera.
+  const v = createVector(x, y, -cameraZ); // The direction vector of the ray.
 
   let intersect; // The point of intersection between the ray and a plane.
-  let closestLambda = eyeZ * 10; // The draw distance.
+  let closestLambda = cameraZ * 10; // The draw distance.
 
   for (let x = 0; x < objects.length; x += 1) {
     let object = objects[x];

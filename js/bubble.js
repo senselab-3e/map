@@ -1,29 +1,27 @@
 class Bubble {
- constructor(x, y, z, texture) {
-   this.x = 200;
-   this.y = 150;
-   this.z = 200;
-   this.texture = random(pictures);
+ constructor(array, x, y, z, texture) {
+   this.x = x;
+   this.y = y;
+   this.z = z;
+   this.array = array;
+   this.texture = loadImage(random(this.array));
  }
-
- // move() {
- //   this.x = this.x + random(-5, 5);
- //   this.y = this.y + random(-5, 5);
- // }
-
+  newTex(){
+    this.texture = loadImage(random(this.array));
+  }
  show() {
    texture(this.texture);
    this.bx = box(this.x, this.y, this.z);
  }
 
  plan() {
+   fill('red');
    texture(this.texture);
-   this.pln = plane(this.x+400, this.y+300);
+   this.pln = plane(this.x, this.y);
  }
 
  huge(){
    texture(this.texture);
    this.bx = box(this.x*4, this.y*3, this.z*4);
  }
-
 }

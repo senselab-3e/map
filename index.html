@@ -7,21 +7,18 @@
 
   <title> minor movements digestion</title>
 
-    <!-- <link href="css/colorshifts.css" rel="stylesheet"  type="text/css"> -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet"  type="text/css"> -->
+    <link href="css/spiral.css" rel="stylesheet"  type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script> -->
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script> -->
-    <!-- <script type="text/javascript" src="js/sprill/js"></script> -->
+
     <style media="screen">
     body{
-      /* background: linear-gradient(90deg, rgba(77,77,121,1) 0%, rgba(99,198,176,1) 35%, rgba(59,181,181,1) 100%); */
-      background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,181,1) 100%);
+      background: linear-gradient(90deg, rgba(77,77,121,1) 0%, rgba(99,198,176,1) 35%, rgba(59,181,181,1) 100%);
+      /* background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,181,1) 100%); */
 
     }
       #frog{
         position:absolute;
-        top:0;
+        top:100px;
         width:100px;
       }
       #frog img{
@@ -36,36 +33,92 @@
         background-size: 100%;
         background-repeat: no-repeat;
       }
+      #mimo{
+        /* position: absolute; */
+        display: none;
+        height: 0px;
+      }
+      #fabmap{
+        margin-left: 10%;
+      }
     </style>
 </head>
 <body>
   <script type="text/javascript">
 
   </script>
-  <!-- <div id="frog"> -->
-    <!-- <img src="froggybouncy.png" height="100"> -->
-    <!-- <img class="froggy" src="http://3e-pr0cess-s33dbank.com/mapz/spongeyfrog.png" > -->
-    <!-- <a class="hvr-wobble-to-bottom-right" href="glider.html"><img src="http://3e-pr0cess-s33dbank.com/mapz/frogster-orange.png"></a> -->
-    <!-- <img src="http://3e-pr0cess-s33dbank.com/mapz/froggybouncy.png"> -->
-    <!-- <img src="http://3e-pr0cess-s33dbank.com/mapz/popup.png"> -->
-    <!--upload-->
-    <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwIDM1UrvDs75hm4ESS2o4vZTGbJsz2QhKvIffqHhgdPc9qQ/viewform" class="hvr-pulse"><img src="http://3e-pr0cess-s33dbank.com/mapz/frog3.png"></a> -->
-    <!-- <img src="http://3e-pr0cess-s33dbank.com/mapz/froggg.png"> -->
-    <!-- <img src="http://3e-pr0cess-s33dbank.com/thingies/grog.png"></div> -->
-<!-- </div> -->
+  <div id="frog">
+    <img class="froggy" src="frog/spongeyfrog.png" >
+    click to stop & press "s" to make a sticker
+</div>
+<button onClick="displayMimo()">minor movements</button>
+<button>amsterdam</button>
+<button>upload tracez</button>
 
-  <div id="fabmap"></div>
+<div id= "mimo">
+  <ul>
+	<li>
+    Minor movements are not ours to make so much as ours to attune to
+	</li>
+	<li>
+    - A curatorial process for the activation of minor movements requires an attunement to the conditions that select for artfulness
+	</li>
+	<li>
+    - An attunement to artfulness opens the work to its more-than
+	</li>
+	<li>
+    - The more-than is what is curated
+	</li>
+	<li>
+    - An environment is activated, an enlivening of an ecology
+	</li>
+	<li>
+    - With the enlivening comes a felt experience of time bending
+	</li>
+	<li>
+    - Time bending moves experience to its emergent unfolding
+	</li>
+	<li>
+    - In this emergent unfolding we are not spectators
+	</li>
+	<li>
+    - Emergent unfoldings affect the environment they co-compose
+	</li>
+	<li>
+    - We are part of that co-composition
+	</li>
+	<li>
+    - To compose a minor movement is to be composed by it
+	</li>
+	<li>
+    - A curatorial process for the activation of minor movements requires an active shift in the presupposition that there is a field of art and a field of life
+	</li>
+	<li>
+    - The political runs through the differential that is composed when the binary between art and life is undone
+	</li>
+	<li>
+    - What mattters is not whether it is art, but how it shifts the conditions of experience
+	</li>
+	<li>
+    - When art becomes the way and not the endpoint minor movements become orientors for processes to come.
+	</li>
+	<li>
+	</li>
+</ul>
+</div>
   <!-- <div id="patch"></div> -->
   <!-- <div onclick="brazil()">brazil</div> -->
+  <div id="fabmap"></div>
+
 
 <div>
 </div>
-<div>
-</div>
+<script>
+function displayMimo(){
+  document.getElementById("mimo").style.display = "block";
+}
+</script>
 
-
-  <!-- <div id="frog" class="hvr-wobble-to-bottom-right" onClick="brazil()"><img src="froggybouncy.png" height="100"></div> -->
-  <!-- <script type="text/javascript" src="js/raycaster.js"></script> -->
 
     <script type="text/javascript" src="js/fabmap-ellipsoid.js"></script>
     <script type="text/javascript" src="js/bubble.js"></script>

@@ -25,6 +25,7 @@ var uval = 0.1;
 var div;
 var bound;
 var mimoAmsterdam, mimoBerlin, mimoSaoPaulo, mimoBudapest, mimoCopenhagen, mimoZurich, mimoLondon, mimoEdinburgh, mimoCluj, mimoMontreal, mimoHelsinki, mimoOz, mimoSpaze, mimoUspaz;
+
 var mimo = ["Minor movements are not ours to make so much as ours to attune to", "A curatorial process for the activation of minor movements requires an attunement to the conditions that select for artfulness", "An attunement to artfulness opens the work to its more-than", "The more-than is what is curated", "An environment is activated, an enlivening of an ecology", "With the enlivening comes a felt experience of time bending", "Time bending moves experience to its emergent unfolding", "In this emergent unfolding we are not spectators", "Emergent unfoldings affect the environment they co-compose", "We are part of that co-composition", "To compose a minor movement is to be composed by it", "A curatorial process for the activation of minor movements requires an active shift in the presupposition that there is a field of art and a field of life", "The political runs through the differential that is composed when the binary between art and life is undone", "What mattters is not whether it is art, but how it shifts the conditions of experience", "When art becomes the way and not the endpoint minor movements become orientors for processes to come."];
 
 var mimoText;
@@ -44,7 +45,8 @@ function preload() {
       mimoSpaze = ["mimoTraces/022.jpeg", "mimoTraces/111.jpg", "mimoTraces/164.jpg", "mimoTraces/165.jpg", "mimoTraces/166.jpg", "mimoTraces/167.jpg", "mimoTraces/168.jpg", "mimoTraces/169.jpg", "mimoTraces/170.jpg", "mimoTraces/171.jpg", "mimoTraces/172.jpg", "mimoTraces/173.jpg", "mimoTraces/174.jpg", "mimoTraces/175.jpg", "mimoTraces/176.jpg", "mimoTraces/177.jpg", "mimoTraces/178.jpg", "mimoTraces/179.jpg", "mimoTraces/180.jpg", "mimoTraces/181.jpg", "mimoTraces/182.jpg", "mimoTraces/183.jpg", "mimoTraces/184.jpg", "mimoTraces/185.jpg", "mimoTraces/186.jpg", "mimoTraces/188.jpg", "mimoTraces/211.jpg", "mimoTraces/224.jpg", "mimoTraces/225.jpg", "mimoTraces/226.jpg", "mimoTraces/227.jpg", "mimoTraces/228.jpg", "mimoTraces/229.jpg", "mimoTraces/262.png", "mimoTraces/263.png", "mimoTraces/264.png", "mimoTraces/265.png", "mimoTraces/266.png", "mimoTraces/267.png", "mimoTraces/268.png", "mimoTraces/269.png", "mimoTraces/270.png", "mimoTraces/271.png", "mimoTraces/272.png", "mimoTraces/273.png", "mimoTraces/274.png", "mimoTraces/480.png", "mimoTraces/481.png", "mimoTraces/482.png", "mimoTraces/483.png", "mimoTraces/493.png"];
       mimoUspaz = ["mimoTraces/043.jpg", "mimoTraces/046.jpg", "mimoTraces/049.jpg", "mimoTraces/059.jpg", "mimoTraces/061.jpg", "mimoTraces/063.jpg", "mimoTraces/065.jpg", "mimoTraces/112.jpg", "mimoTraces/114.jpg", "mimoTraces/119.jpg", "mimoTraces/187.jpg", "mimoTraces/189.jpg", "mimoTraces/190.jpg", "mimoTraces/191.jpg", "mimoTraces/192.jpg", "mimoTraces/193.jpg", "mimoTraces/195.jpg", "mimoTraces/196.jpg", "mimoTraces/197.jpg", "mimoTraces/198.jpg", "mimoTraces/199.jpg", "mimoTraces/200.jpg", "mimoTraces/201.jpg", "mimoTraces/202.pg", "mimoTraces/203.jpg", "mimoTraces/204.jpg", "mimoTraces/208.jpg", "mimoTraces/209.jpg", "mimoTraces/210.jpg", "mimoTraces/258.tiff", "mimoTraces/259.tiff", "mimoTraces/113.jpg", "mimoTraces/116.png", "mimoTraces/194.jpg", "mimoTraces/311.png"];
       pictures = ['thingies/beige.png', 'thingies/pinkpatch.png', 'thingies/plantplastic.png', 'thingies/polkaslink.png', 'thingies/posterpatch.png', 'thingies/posters.png', 'thingies/prepillowcreature.png'];
-      rand = loadImage(random(mimoAmsterdam));
+      // rand = loadImage(random(mimoAmsterdam));
+      choosechooseMimo();
 }
 
 function setup() {
@@ -53,11 +55,11 @@ function setup() {
   fabb.mousePressed(pauseCanvas);
 
   sliderX = createSlider(-1000, 1000, 0);
-  sliderX.position(19, 20);
+  sliderX.position(119, 20);
   sliderY = createSlider(-1000, 1000, -429);
-  sliderY.position(19, 40);
+  sliderY.position(119, 40);
   sliderZ = createSlider(-1000, 1000, 226);
-  sliderZ.position(19, 60);
+  sliderZ.position(119, 60);
 
   thingies = new Bubble(pictures, 10, 10, 10);
 
@@ -113,9 +115,11 @@ function draw() {
 
 function div(){
 div = createDiv(mimo);
+// div.addClass('displayme');
 div.style('display', 'none');
-div.position(100,100);
+div.style('background', 'blue');
 
+div.position(400, 100);
 }
 
 // function zoomOut() {
@@ -133,9 +137,7 @@ function pauseCanvas() {
 }
 function svvi(x){
   var y = sin(x/(sin(x/30)*10+290))*500;
-    // console.log(y);
   return y;
-  // console.log(y);
 }
 
 function keyPressed() {
@@ -150,4 +152,17 @@ function keyPressed() {
       var cri = image(img, (-width)/2, (-height)/2);
       save(img, 'mimo-sticker.png');
     }
+  }
+
+function choosechooseMimo(){
+      const arrayoptions = [mimoAmsterdam, mimoBerlin, mimoSaoPaulo, mimoBudapest, mimoCopenhagen, mimoZurich, mimoLondon, mimoEdinburgh, mimoCluj, mimoMontreal, mimoHelsinki, mimoOz, mimoSpaze, mimoUspaz];
+      const insertarry = () => {
+       return Math.floor(Math.random() * Math.floor(arrayoptions.length));
+    }
+    rand = arrayoptions[insertarry()];
+    chooseMimo(arrayoptions[insertarry()]);
+  }
+
+  function chooseMimo(thismimo) {
+    rand = loadImage(random(thismimo));
   }

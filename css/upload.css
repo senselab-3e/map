@@ -2,7 +2,7 @@
   background: url("../plants/resting.png") no-repeat;
   height: 100px;
   width: 100px;
-  border: none;
+  /* border: none; */
   /* color:none; */
   text-align:center;
 }
@@ -11,7 +11,7 @@
   background: url("../plants/openmouth.png") no-repeat;
   height: 100px;
   width: 100px;
-  border: none;
+  /* border: none; */
 }
 
 /* body { */

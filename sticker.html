@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript">
+      function keyPressed() {
+          if (key == 's') {
+            circli.position(mouseX, mouseY);
+            let img = createImage(stickerdia, stickerdia); // same as new p5.Image(100, 100);
+            img.copy('061.jpg', 100, 100, stickerdia, stickerdia, 0, 0, stickerdia, stickerdia);
+            maskImage = createGraphics(stickerdia*2, stickerdia*2);
+            maskImage.ellipse(stickerdia, stickerdia, stickerdia*2, stickerdia*2);
+            img.mask(maskImage);
+            fill(255);
+            rect(0, 0, stickerdia, stickerdia);
+            fill(0);
+            ellipse(stickerdia/2, stickerdia/2, stickerdia, stickerdia);
+            var cri = image(img, 0, 0);
+            save(img, 'huh.png');
+          }
+        }
+    </script>
+
+  </body>
+</html>

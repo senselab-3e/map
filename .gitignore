@@ -3,3 +3,5 @@ old
 node_modules
 package-lock.json
 /mapz/mimoTraces
+mimoTraces_copy
+models

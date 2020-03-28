@@ -9,12 +9,12 @@
 
     <link href="css/spiral.css" rel="stylesheet"  type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <link rel="stylesheet" href=css/upload.css type="text/css">
 
     <style media="screen">
-    body{
+    html, body{
       background: linear-gradient(90deg, rgba(77,77,121,1) 0%, rgba(99,198,176,1) 35%, rgba(59,181,181,1) 100%);
-      /* background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,181,1) 100%); */
-
+      cursor: url(cursor.png), auto;
     }
       #frog{
         position:absolute;
@@ -24,23 +24,21 @@
       #frog img{
         width:100px;
       }
-      #patch {
-        margin-left:auto;
-        margin-right:auto;
-        width: 300px;
-        height: 456px;
-        /* background-color: none; */
-        background-size: 100%;
-        background-repeat: no-repeat;
-      }
       #mimo{
-        /* position: absolute; */
         display: none;
         height: 0px;
       }
       #fabmap{
         margin-left: 10%;
       }
+      .circlebutton {
+          /* border: 3px solid #BADA55; */
+          border-radius: 50%;
+          background: none;
+          width: 100px;
+          height:100px;
+        }
+
     </style>
 </head>
 <body>
@@ -48,12 +46,31 @@
 
   </script>
   <div id="frog">
+
     <img class="froggy" src="frog/spongeyfrog.png" >
-    click to stop & press "s" to make a sticker
-</div>
-<button onClick="displayMimo()">minor movements</button>
-<button>amsterdam</button>
-<button>upload tracez</button>
+    <button class="circlebutton">
+    press "s" to save a sticker to your computer
+    </button>
+    <button class="circlebutton" onClick="displayMimo()">
+      minor movements
+    </button>
+    <!-- <button class="circlebutton">Sao Paulo</button>
+    <button class="circlebutton">Amsterdam</button>
+    <button class="circlebutton">Zurich</button>
+    <button class="circlebutton">London-Manchester</button>
+    <button class="circlebutton">Berlin</button>
+    <button class="circlebutton">Edinburgh</button>
+    <button class="circlebutton">Cluj</button>
+    <button class="circlebutton">Montreal</button>
+    <button class="circlebutton">Helsinki</button>
+    <button class="circlebutton">Bendigo</button>
+    <button class="circlebutton">spaze</button>
+    <button class="circlebutton">uspazz</button> -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwIDM1UrvDs75hm4ESS2o4vZTGbJsz2QhKvIffqHhgdPc9qQ/viewform" target="_top"><div class="big"><b><b></div><div class="plants plant"><button class="circlebutton">upload anarchival tracez</button></div>
+
+  </a>
+  </div>
+
 
 <div id= "mimo">
   <ul>
@@ -106,8 +123,6 @@
 	</li>
 </ul>
 </div>
-  <!-- <div id="patch"></div> -->
-  <!-- <div onclick="brazil()">brazil</div> -->
   <div id="fabmap"></div>
 
 
